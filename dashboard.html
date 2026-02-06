@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KAVACH AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h1>KAVACH AI Dashboard</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <section class="dashboard">
+        <h2 id="welcomeText"></h2>
+
+        <div class="card">
+            <h3>AI Risk Prediction</h3>
+            <p>Check sewer safety before allowing manual entry.</p>
+
+            <label>Rainfall (mm)</label>
+            <input type="number" id="rainfall">
+
+            <label>Days Since Last Cleaning</label>
+            <input type="number" id="days">
+
+            <label>Past Incidents</label>
+            <input type="number" id="incidents">
+
+            <button onclick="predictRisk()">Predict Risk</button>
+
+            <h4 id="riskResult"></h4>
+        </div>
+
+        <div class="card alert">
+            <h3>Emergency SOS</h3>
+            <button class="danger">Trigger SOS</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
